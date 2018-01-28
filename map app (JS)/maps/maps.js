@@ -3,11 +3,7 @@
 (function () {
     "use strict";
 
-   
-
-
-
-    if (navigator.geolocation) {
+    /*if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
           var pos = {
             lat: position.coords.latitude,
@@ -25,16 +21,16 @@
         });
       } else {
         console.log('error');
-    }
+      }*/
 
     let search = $('#search'),
         markers = [],
         numResultsInput = $('#numResults'),
         theList = $('#picDiv ul'),
         rectangle = null,
-        infoWindow = new google.maps.InfoWindow({
+        /*infoWindow = new google.maps.InfoWindow({
             maxWidth: 250
-        }),
+        }),*/
         location = {lat: -34.397, lng: 150.644},
         clearmap = function(){
             if(rectangle !== null){
@@ -74,13 +70,13 @@
             });
             map.fitBounds(bounds);
         },
-        map = new google.maps.Map(
+        /*map = new google.maps.Map(
             document.getElementById('map'),
             {
                 center: location,
                 zoom: 2
             }
-        ),
+        ),*/
         drawingManager = new google.maps.drawing.DrawingManager({
             drawingControlOptions: {
                 position: google.maps.ControlPosition.TOP_LEFT,
