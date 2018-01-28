@@ -5,7 +5,7 @@ class Db {
     private static $instance;
 
     private function __construct() {
-        
+
         $cs = "mysql:host=localhost;dbname=test";
         $user = "test";
         $password = "password";
@@ -17,8 +17,6 @@ class Db {
             $error = "Something went wrong " . $e->getMessage();
         }
     }
-
-    private function __clone() {}
 
     public static function getDb() {
         if(empty(Db::$instance)) {
