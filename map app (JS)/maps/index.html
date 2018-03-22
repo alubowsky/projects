@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" 
-    integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+        crossorigin="anonymous">
     <title>Document</title>
     <style>
         html,
@@ -17,21 +17,27 @@
             padding: 0;
             margin: 0;
         }
-        body{
+
+        body {
             background-image: url("background.jpg");
         }
-        .container, .row{
+
+        .container,
+        .row {
             height: 100%;
+            padding: 0;
         }
-        .jumbotron{
+
+        .jumbotron {
             box-shadow: 5px 10px 20px cornflowerblue;
             background-color: #6495ed;
         }
-         
-        .jumbotron h1{
+
+        .jumbotron h1 {
             color: rgba(0, 128, 0, 0.781);
             font-weight: bolder;
         }
+
         #picDiv ul {
             list-style: none;
             padding: 0;
@@ -41,8 +47,8 @@
             cursor: pointer;
             border: 1px solid black;
             margin: 4px;
-            height: 150px;
-            width: 340px;
+            height: 170px;
+            width: 435px;
             overflow: hidden;
         }
 
@@ -51,29 +57,34 @@
         }
 
         #picDiv li img {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 170px;
             vertical-align: middle;
             margin-right: 6px;
         }
-        .overflow{
+
+        .overflow {
             overflow: auto;
         }
-        #more{
+
+        #more {
             display: none;
         }
-        #details{
+
+        #details {
             vertical-align: top;
-            height: 150px;
-            width: 180px;
+            height: 170px;
+            width: 215px;
             display: inline-block;
-            text-align: center;;
+            text-align: center;
         }
+
         #details h5 {
-            height: 50%;
+            height: 45%;
         }
+
         #details p {
-            height: 50%;
+            height: 55%;
             margin-top: 20px;
         }
     </style>
@@ -81,34 +92,34 @@
 
 <body>
     <div class="container">
-        <div class = "jumbotron text-center">
+        <div class="jumbotron text-center">
             <h1>Where In The World Are You Davening?</h1>
         </div>
-        <div class = "row">
-            <div class = "col-sm-4 bg-primary rounded overflow">
+        <div class="row">
+            <div class="col-sm-5 bg-primary rounded overflow">
                 <div class="input-group mt-1">
-                        <input type="text" class="form-control" id = 'search' placeholder="Search">
-                        <span class="input-group-btn">
-                            <button class="btn btn-secondary"  id = 'go' type="button">Go!</button>
-                        </span>
+                    <input type="text" class="form-control" id='search' placeholder="Search">
+                    <span class="input-group-btn">
+                        <button class="btn btn-secondary" id='go' type="button">Go!</button>
+                    </span>
                 </div>
                 <div>
-                    <div id = "picDiv">
+                    <div id="picDiv">
                         <ul></ul>
                     </div>
                     <div>
-                        <button class="btn btn-secondary"  id = 'more' type="button">more</button>
+                        <button class="btn btn-secondary" id='more' type="button">more</button>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-8 map">
-                    <div id="map" class="rounded"></div>
+            <div class="col-sm-7 map">
+                <div id="map" class="rounded"></div>
             </div>
         </div>
     </div>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4Xp2PoMZ39fBByP6wVdcfOMKlMFLpFq8&libraries=places"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4Xp2PoMZ39fBByP6wVdcfOMKlMFLpFq8&libraries=places,drawing"></script>
     <script src="map.js"></script>
 </body>
 
