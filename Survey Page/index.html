@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey</title>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center" id="title">Survey Form</h1>
+        </div>
+        <div class="col-sm-10 offset-sm-1 white-background">
+            <p class="text-center" id="description">Let us know how we can improve your dinner experience</p>
+            <form id="survey-form">
+                <div class="form-group row">
+                    <label for="name" id="name-label" class="col-sm-5 text-right col-form-label">Name:</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control form-control-lg" id="name" required placeholder="Enter Name">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="email" id="email-label" class="col-sm-5 text-right col-form-label">Email:</label>
+                    <div class="col-sm-5">
+                        <input type="email" class="form-control form-control-lg" id="email" required placeholder="Enter Email">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="age" id="number-label" class="col-sm-5 text-right col-form-label">Age:</label>
+                    <div class="col-sm-5">
+                        <input type="number" class="form-control form-control-lg" id="number" min="1" max="120" placeholder="Enter Age">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="dropdown" class="col-sm-5 text-right col-form-label">Dropdown:</label>
+                    <div class="col-sm-5">
+                        <select id="dropdown" class="form-control form-control-lg" name="cars">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="fiat">Fiat</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                </div>
+
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label text-right col-sm-5 pt-0">Radios</legend>
+                        <div class="col-sm-5">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio1" value="customRadio1" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio2" value="customRadio1" name="customRadio" class="custom-control-input" checked>
+                                <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio3" value="customRadio1" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio3">Or toggle this other custom radio</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label text-right col-sm-5 pt-0">Checkbox's</legend>
+                        <div class="col-sm-5">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1" checked value="1">
+                                <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2" value="2">
+                                <label class="custom-control-label" for="customCheck2">Check this custom checkbox</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck3" value="3">
+                                <label class="custom-control-label" for="customCheck3">Check this custom checkbox</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="form-group row">
+                    <label for="exampleFormControlTextarea1" class="col-sm-5 text-right col-form-label">Example textarea</label>
+                    <div class="col-sm-5">
+                        <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
+                <button id="submit" type="submit" class="btn btn-primary my-3 col-sm-7 offset-sm-3">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
